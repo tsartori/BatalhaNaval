@@ -301,19 +301,19 @@ void jogar(){
         getch();
         if((perde==8)&&(ganha==8)){
             apresentacao();
-            printf ("\n\t\tVoce empatou com o computador.\n\n\t\tVoce deu %d disparos, sendo %d deles na agua.\n\n\n\tJogo Desenvolvido por: Thiago Sartori - download_sartori@hotmail.com", tiros, tiros-8);
+            printf ("\n\t\tVoce empatou com o computador.\n\n\t\tVoce deu %d disparos, sendo %d deles na agua.\n\n\n\tJogo Desenvolvido por: Thiago Sartori - thiagosartori@live.com", tiros, tiros-8);
             getch();
             return;
         }
         if (ganha==8){
             apresentacao();
-            printf ("\n\t\tParabens voce ganhou do computador.\n\n\t\tVoce deu %d disparos, sendo %d deles na agua.\n\n\n\tJogo Desenvolvido por: Thiago Sartori - download_sartori@hotmail.com", tiros, tiros-8);
+            printf ("\n\t\tParabens voce ganhou do computador.\n\n\t\tVoce deu %d disparos, sendo %d deles na agua.\n\n\n\tJogo Desenvolvido por: Thiago Sartori - thiagosartori@live.com", tiros, tiros-8);
             getch();
             return;
         }
         if (perde==8){
             apresentacao();
-            printf ("\n\tPerdeu playboy!!!\n\n\tJogo Desenvolvido por: Thiago Sartori - download_sartori@hotmail.com");
+            printf ("\n\tPerdeu playboy!!!\n\n\tJogo Desenvolvido por: Thiago Sartori - thiagosartori@live.com");
             getch();
             return;
         }
@@ -331,7 +331,7 @@ int main(int argc, char *argv[]){
                  break;
             case '2':
                  apresentacao();
-                 cout<<"\n\tJogo Desenvolvido por THIAGO SARTORI - download_sartori@hotmail.com";
+                 cout<<"\n\tJogo Desenvolvido por THIAGO SARTORI - thiagosartori@live.com";
                  getch();
                  break;
             case '3':
