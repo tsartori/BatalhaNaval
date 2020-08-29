@@ -1,3 +1,3 @@
 ### Jogo Batalha naval
 
-Jogo desenvolvido durante o 1º Período do curso de Ciência da Computação [UNIFAGOC](https://fagoc.br/)
+Jogo desenvolvido em 2009 durante o 1Âº PerÃ­odo do curso de CiÃªncia da ComputaÃ§Ã£o [UNIFAGOC](https://fagoc.br/)
