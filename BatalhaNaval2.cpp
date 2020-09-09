@@ -10,9 +10,9 @@ BOOL WINAPI FullScreenConsoleNT(void){
     DWORD newmode = 1;
     DWORD oldmode;
     SetConsoleDisplayModeT SetConsoleDisplayMode;
-   HINSTANCE hK32 = GetModuleHandle("KERNEL32.DLL");
+    HINSTANCE hK32 = GetModuleHandle("KERNEL32.DLL");
     if ( hK32 == NULL ) {
-              return FALSE;
+        return FALSE;
     }
     SetConsoleDisplayMode = ( SetConsoleDisplayModeT )
 		GetProcAddress(hK32,"SetConsoleDisplayMode");
@@ -29,7 +29,7 @@ void apresentacao(){
     printf ("\t   *******************************************************\n\n\n");
 }
 void jogar(){
-     int tabela1[10][10]={0},tabela2[10][10]={0},tabela3[10][10]={0},tabela4[10][10]={0},ind,ind1,pos, ganha=0, perde=0, tiros=0;
+    int tabela1[10][10]={0},tabela2[10][10]={0},tabela3[10][10]={0},tabela4[10][10]={0},ind,ind1,pos, ganha=0, perde=0, tiros=0;
     int i,j,k;
     FullScreenConsoleNT();
     srand(time(NULL));
@@ -55,7 +55,7 @@ void jogar(){
         }
         else {
             while (tabela2[ind][ind1]!=0){
-                printf ("Nesta posição ja foi colocado um submarino.\n");
+                printf ("Nesta posiï¿½ï¿½o ja foi colocado um submarino.\n");
                 printf ("Digite a linha e a coluna (ex: 1 2) para colocar o submarino\n");
                 scanf ("%d %d", &ind,&ind1);
             }
@@ -67,7 +67,7 @@ void jogar(){
         printf ("Voce possui 2 submarinos e 2 fragatas (as fragatas tem 3 partes e os submarinos 1).\n");
         printf ("Legenda:\n1 --> Submarino\n3 --> Fragata\n5 --> Agua\n\n");
         printf ("\t\t   ATENCAO!!!\n\n");
-        printf ("Obs: Quando voce digitar as coordenadas de uma parte da fragata as outras 2 partes serão colocadas automaticamente (uma parte pra frente e outra para tras). Então cuidado, pois se a coordenada informada for por exemplo linha 9 e coluna 9 de posicao horizontal, não ira ser possivel colocar a parte da frente da fragata pois nao tem a coluna 10, logo o jogo ficara com uma falha. FIQUE ATENTO!!!\n\n");
+        printf ("Obs: Quando voce digitar as coordenadas de uma parte da fragata as outras 2 partes serï¿½o colocadas automaticamente (uma parte pra frente e outra para tras). Entï¿½o cuidado, pois se a coordenada informada for por exemplo linha 9 e coluna 9 de posicao horizontal, nï¿½o ira ser possivel colocar a parte da frente da fragata pois nao tem a coluna 10, logo o jogo ficara com uma falha. FIQUE ATENTO!!!\n\n");
         printf ("\t   Esta e sua tabela\n\n");
         puts("");
         printf("Colunas --> 0 1 2 3 4 5 6 7 8 9\n");
@@ -92,7 +92,7 @@ void jogar(){
             else {
                 while ((tabela2[ind][ind1-1]!=0)||(tabela2[ind][ind1]!=0)||(tabela2[ind][ind1+1]!=0)){
                     apresentacao();
-                    printf ("Nesta posição ja foi colocado um submarino ou uma fragata.\n");
+                    printf ("Nesta posiï¿½ï¿½o ja foi colocado um submarino ou uma fragata.\n");
                     printf ("Digite a linha e a coluna (ex: 1 2) para colocar a fragata\n");
                     scanf ("%d %d", &ind,&ind1);
                 }
@@ -110,7 +110,7 @@ void jogar(){
             else {
                 while ((tabela2[ind-1][ind1]!=0)||(tabela2[ind][ind1]!=0)||(tabela2[ind+1][ind1]!=0)){
                     apresentacao();
-                    printf ("Nesta posição ja foi colocado um submarino ou uma fragata.\n");
+                    printf ("Nesta posiï¿½ï¿½o ja foi colocado um submarino ou uma fragata.\n");
                     printf ("Digite a linha e a coluna (ex: 1 2) para colocar a fragata\n");
                     scanf ("%d %d", &ind,&ind1);
                 }
@@ -128,7 +128,7 @@ void jogar(){
             else {
                 while ((tabela2[ind-1][ind1-1]!=0)||(tabela2[ind][ind1]!=0)||(tabela2[ind+1][ind1+1]!=0)){
                     apresentacao();
-                    printf ("Nesta posição ja foi colocado um submarino ou uma fragata.\n");
+                    printf ("Nesta posiï¿½ï¿½o ja foi colocado um submarino ou uma fragata.\n");
                     printf ("Digite a linha e a coluna (ex: 1 2) para colocar a fragata\n");
                     scanf ("%d %d", &ind,&ind1);
                 }
@@ -271,8 +271,8 @@ void jogar(){
         apresentacao();
         puts ("\t\t\t...:::INFORMACAO:::...\n\n");
         while (tabela1[ind][ind1]!=0){
-              ind=rand()%10;
-              ind1=rand()%10;
+            ind=rand()%10;
+            ind1=rand()%10;
         }
         if ((tabela2[ind][ind1]==1)||(tabela2[ind][ind1]==3)){
             tabela1[ind][ind1]=tabela2[ind][ind1];
@@ -327,21 +327,21 @@ int main(int argc, char *argv[]){
         cin>>menu;
         switch(menu){
             case '1':
-                 jogar();
-                 break;
+                jogar();
+                break;
             case '2':
-                 apresentacao();
-                 cout<<"\n\tJogo Desenvolvido por THIAGO SARTORI - thiagosartori@live.com";
-                 getch();
-                 break;
+                apresentacao();
+                cout<<"\n\tJogo Desenvolvido por THIAGO SARTORI - thiagosartori@live.com";
+                getch();
+                break;
             case '3':
-                 exit(0);
-                 break;
+                exit(0);
+                break;
             default:
-                 apresentacao();
-                 cout<<"\n\t\t\t-->\aOpcao Invalida";
-                 getch();   
-                 break;
+                apresentacao();
+                cout<<"\n\t\t\t-->\aOpcao Invalida";
+                getch();   
+                break;
         }
     }
 }
